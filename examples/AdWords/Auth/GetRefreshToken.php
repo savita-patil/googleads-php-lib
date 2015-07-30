@@ -46,7 +46,6 @@ function GetOAuth2Credential($user) {
   $OAuth2Handler = $user->GetOAuth2Handler();
   $authorizationUrl = $OAuth2Handler->GetAuthorizationUrl(
       $user->GetOAuth2Info(), $redirectUri, $offline);
-
   // In a web application you would redirect the user to the authorization URL
   // and after approving the token they would be redirected back to the
   // redirect URL, with the URL parameter "code" added. For desktop
